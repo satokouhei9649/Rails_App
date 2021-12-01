@@ -1,0 +1,17 @@
+<main class="main">
+    <div class="Form">
+         <h1>ログイン画面</h1>
+        <%= form_tag("/login") do %>
+                <%= @error_message %>
+            <p>メールアドレス</p>
+            <input name="email"  class="usersForm">
+            <p>パスワード</p>
+            <input type="password" name="password"  class="usersForm">
+            <input type="submit" value="ログイン" class="loginForm">            
+        <% end %>
+              
+        <%= link_to "新規ユーザー登録がまだの方はこちらへ" , signup_path, class: "btn Btn" %>
+       <%= link_to 'Topへ', root_path, class: "edit backlink Btn" %>
+    </div>
+    
+</main>

@@ -1,0 +1,11 @@
+<div class=topics>
+    <h2>自分で投稿した記事一覧</h2>
+    <ul>
+        <% @mytopics.each do |topic| %>
+        <li class="topic"><%= link_to topic.title, topic_path(topic),class: "topicLink" %></li>
+        <% end %>
+    </ul>
+    
+    
+   <%= link_to 'Topへ', root_path, class: "edit backlink" %>
+</div>

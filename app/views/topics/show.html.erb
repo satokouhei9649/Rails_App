@@ -1,0 +1,75 @@
+<main class="topicContainer">
+    <!--題名-->
+    <h1 class="topicTitle"><%= @topic.title %></h1>
+
+    <!--投稿の内容-->
+    <p class="topicBody"><%= @topic.body%></p>
+     <!--投稿者の機能-->
+    <div class="editFunction">
+        <% if session[:user_id] == @topic.user_id %>    
+            <%= link_to '編集', edit_topic_path, class: "edit" %>
+            <%= link_to '削除', topic_path(@topic), method: :delete, data: { confirm: '記事を削除しますか？' }, class: "edit delete"%>
+        <% end %>
+            <%= link_to 'Topへ', root_path, class: "edit backlink" %>
+    </div>
+   <p class="total">総投票数　<%= @total %></p>
+    
+   
+    
+        
+      <!--選択肢を表示-->
+        <% @choices.each do | choices | %>
+        <div class="choice_div">
+            <div class="choice_content"><%= choices.content %></div>
+              <!--選択肢削除機能-->
+               <% if session[:user_id] == @topic.user_id %> 
+                    <!--<div class="deleteBtn">-->
+                        <%= form_with model: @choice,  url: {controller: "choices", action: "destroy"} do |delete| %>
+                              <%= delete.submit "[X]" ,data: { confirm: '削除しますか？' }, class: "delete_btn" %>
+                              <%= hidden_field_tag :choice_id, choices.id %>
+                        <% end %>
+                    <!--</div>-->
+                <% end %>
+            </div>
+          
+              
+              
+            <% if session[:user_id] %>
+            <div class="votesFunction">
+            <!--投票機能-->
+                <div class="Btn">
+                    <% if @user.id == session[:user_id]  %>
+                      <%= form_with model: @choice,  url: {controller: "choices", action: "votes"} do |votes| %>
+                          <%= votes.submit "投票", class: "votesBtn" %>
+                          <%= hidden_field_tag :choice_id, choices.id %>
+                      <% end %>
+                    <% end %> 
+                </div>
+                <!--取り消し機能-->
+                    <% if @user.id == session[:user_id]%>
+                    <div class="Btn">
+                      <%= form_with model: @choice,  url: {controller: "choices", action: "votes_cancel"} do |votes| %>
+                              <%= votes.submit "取り消し", class: "cancelBtn" %>
+                              <%= hidden_field_tag :choice_id, choices.id %>
+                      <% end %>
+                    </div>
+                    <% end %>
+            </div>
+                
+             <% end %>
+        <% end %>
+   
+       <% if session[:user_id] %>
+       <h2>選択肢の作成</h2>
+              <!--選択肢の作成-->
+         <%= form_with model: @choice,  class: "choice_form",url: {controller: "choices", action: "create"} do |choice| %>
+             <!--送信ボタン-->
+             <%= choice.submit "+" %>
+             <!--選択肢の文章-->
+             <%= choice.text_field :content %>
+             
+             <%= hidden_field_tag :topic_id, @topic.id %>
+         <% end %>
+        <% end %>
+     
+</main>

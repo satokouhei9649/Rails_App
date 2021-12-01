@@ -1,0 +1,65 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+// ユーザ新規登録画面
+
+.Form {
+    text-align: center;
+    border: 1px solid gray;
+    box-shadow: 4px 2px;
+    margin: 0 auto;
+    width: 40%;
+    border-radius: 10px;
+    background-color: white;
+}
+.btn {
+    color: white;
+    padding: 4px 8px;
+    width: 25%;
+    background-color: #1e92ff;
+    border-color: #1e92ff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.usersForm {
+    line-height: 10px;
+    display: inline-block;
+    width: 40%;
+    margin-bottom: 30px;
+}
+.loginForm {
+    display: block;
+    margin: 20px auto;
+    width: 25%;
+    color: white;
+    background-color: rgb(2, 214, 48);
+    border: 1px solid rgb(2, 214, 48);
+    border-radius: 10px;
+    box-shadow: 2px 2px rgba(2, 214, 48, 0.144);
+}
+button {
+    display: block;
+    margin: 20px auto;
+    width: 25%;
+    background-color: rgba(255, 123, 0, 0.911);
+    border: 1px solid rgba(255, 123, 0, 0.911);
+    color: white;
+    border-radius: 10px;
+}
+.Btn {
+    display: block;
+    margin: 10px auto;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+

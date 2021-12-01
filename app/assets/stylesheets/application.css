@@ -1,0 +1,282 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body {
+    margin: 0 auto;
+    text-align: center;
+    background-color:rgba(255, 191, 123, 0.753);
+    }
+ a:link {
+     text-decoration: none;
+ }
+ a:visited {
+     text-decoration: none;
+ }
+/*Top画面*/
+/*ヘッダー*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    margin:0 auto;
+    background-color: orange;
+    padding: 15px;
+}
+
+.menu > ul {
+    display: flex;
+    float:right;
+    list-style: none;
+}
+.menu > ul > li {
+   margin:0;
+   margin-right: 30px;
+   padding: 5px 10px;
+   color: white;
+}
+.link:visited {
+   color: white;
+}
+.alist:visited {
+    color: black;
+}
+.alist:link{
+    color: black;
+}
+.searchNav {
+    margin: 0 auto;
+    width: 50%;
+}
+.search {
+    display: flex;
+    align-items: center;
+    ;
+}
+.searchForm {
+    display: block;
+    margin: 0 auto;
+    height: 20px;
+    width: 60%;
+    border-radius: 5px;
+}
+.searchBtn {
+}
+
+/*topページ*/
+main {
+margin: 0 auto;
+padding: 20px;
+
+}
+.main {
+    width: 100%;
+    padding: 60px 0;
+}
+.main > h1 {
+    font-size: 60px;
+    margin:0;
+   
+}
+.main_title {
+    font-size: 48px;
+}
+
+.topics {
+    margin: 0 auto;
+    margin-left: 240px;
+    width: 60%;
+}
+.topicLink {
+    color: black;
+}
+.topic {
+    color: black;
+    border: 1px solid black;
+    padding: 40px ;
+    margin-bottom: 24px;
+    border-radius: 15px;
+    box-shadow: 1px 1px ;
+    background-color :white;
+}
+.top {
+    display: flex;
+}
+.lists {
+    margin: 0 auto;
+}
+
+.list {
+    border: 1px solid black;
+    list-style: none;
+    padding: 12px 32px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+
+/*投稿画面*/
+/*input[type= "text"],textarea {*/
+/*    margin-bottom: 20px;*/
+/*    height: 30px;*/
+/*}*/
+/*textarea {*/
+/*    height: 200px;*/
+/*}*/
+/*input[type="submit"] {*/
+/*    text-align: center;*/
+/*    display: block;*/
+/*    margin: 20px auto;*/
+/*}*/
+.error {
+    font-size:14px;
+    font-weight: bold;
+    color: tomato;
+}
+.submit {
+    background-color: rgba(255, 123, 0, 0.911);
+    border: 1px solid rgba(255, 123, 0, 0.911);
+    color: white;
+    width: 20%;
+    cursor: pointer;
+}
+.createTopic {
+     width:50%;
+}
+
+
+/*show.html.erb*/
+.topicContainer {
+    padding:50px;
+    background-color:rgba(255, 191, 123, 0.753);
+}
+/*タイトル*/
+.topicTitle {
+    margin: 25px auto;
+    font-size: 35px;
+}
+.topicBody {
+    display: inline-block;
+    width: 50%;
+    padding: 30px;
+    border: 1px solid;
+    border-radius: 30px;
+    text-align: left;
+    background-color: white;
+    margin: 20px 0;
+}
+/*編集機能*/
+.editFunction {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 20px;
+    margin: 0 auto;
+}
+.edit {
+   background-color:rgb(2, 214, 48);
+   color: white;
+   border-color: rgb(2, 214, 48);
+   border-radius: 5px;
+   list-style: none;
+   width: 15%;
+}
+.delete {
+    background-color: red;
+}
+.backlink{
+    display:inline-block;
+    border-radius: 5px;
+    width: 15%;
+    background-color: orange;
+    color: white;
+}
+
+.total {
+    font-size: 36px;
+}
+.choice_div > input[type="submit"] {
+    display: inline-block;
+    width: 15%;
+    height: 30px;
+    margin-left: 330px;
+}
+/*選択肢表示*/
+.choice_div {
+    display: flex;
+    justify-content: center;
+}
+.choice_content {
+    display: block;
+    list-style: none;
+    height: 40px;
+    width: 40%;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 4px 12px;
+    box-sizing: border-box;
+    margin-top: 17px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    background-color: white;
+}
+
+.delete_btn {
+    height: 35px;
+    font-size: 15px;
+    color: white;
+    background-color: orange;
+    border-color: orange;
+    margin: 10px auto;
+}
+
+/*選択肢作製*/
+.choice_form > input[type= "text"] {
+  width: 40%;
+  height: 40px;
+}
+
+/*追加ボタン*/
+.choice_form > input[type= "submit"] {
+    margin: 30px auto;
+    width: 10%;
+    color:white;
+    background-color: orange;
+    border-radius: 5px;
+    border-color: orange;
+}
+
+/*投票機能*/
+.votesFunction {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    margin-top: 20px;
+    
+}
+.votesBtn {
+    background-color: blue;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    margin-right: 50px;
+}
+.cancelBtn {
+    background-color: tomato;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    margin-left: 50px;
+}

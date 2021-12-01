@@ -1,0 +1,33 @@
+ 
+<main>
+    <div class="main"><h1>ようこそ調査.comへ！！！</h1></div>
+        <h1 class="main_title">記事一覧</h1>
+    <section class="top">
+        <div class=topics>
+            <ul>
+                <% @topics.each do |topic| %>
+                <li class="topic"><%= link_to topic.title, topic_path(topic),class: "topicLink" %></li>
+                <% end %>
+            </ul>
+        </div>
+        <div class="lists">
+            <ul>
+                <li class="list"><%= link_to '新規投稿作成', new_topic_path, class: "alist" %></li>
+                <li class="list"><%= link_to '新規登録', "/signup" ,class: "alist"%> / <%= link_to 'ログイン', "/login", class: "alist"%></li>
+                <li class="list"><%= link_to '自分が投稿した記事を確認する', "/mytopics" ,class: "alist"%> </li>
+            </ul>
+        </div>
+    </section>
+    
+        <div class="searchNav">
+           <%= form_with url: topics_search_path, method: :get,class: "search", local: true do |f| %>
+              <%= f.text_field :keyword, value: @keyword,class: "searchForm"%>
+              <%= f.submit "検索", class: "searchBtn" %>
+            <% end %>
+         </div>
+        <p>お気に入りに登録</p>
+</main>
+<footer>
+    <p>お問い合わせフォームはこちら</p>
+    <p>help</p>
+</footer>

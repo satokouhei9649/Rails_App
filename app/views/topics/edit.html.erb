@@ -1,0 +1,30 @@
+<main>
+ <h1>Topicの変更</h1>
+ <%= form_for @topic, url:topic_path(@topic) do |f|%>
+ <h2>タイトルの変更</h2>
+    <p>
+        <!--タイトル入力-->
+        <%= f.text_field :title, placeholder: @topic.title %>
+        
+        <!--エラー表示-->
+        <% if @topic.errors.messages[:title].any? %>
+         <span class="error"><%= @topic.errors.messages[:title][0] %></span>
+        <% end %>
+    </p>
+    <h2>選択肢の変更</h2>
+    <p>
+        <!--本文入力-->
+        <%= f.text_area :body, placeholder: @topic.body %>
+        
+        <% if @topic.errors.messages[:body].any? %>
+         <span class="error"><%= @topic.errors.messages[:body][0] %></span>
+        <% end %>
+    </p>
+    <p>
+        <!--投稿ボタン-->
+        <%= f.submit  value="変更",class: "link edit"%>
+    </p>
+   
+ <% end %>
+ <%= link_to "戻る" ,topic_path , class: "link backlink"%>
+</main>

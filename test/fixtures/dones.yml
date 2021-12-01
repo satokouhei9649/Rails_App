@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  done_user: 1
+  done_topic: 1
+  done: 1
+
+two:
+  done_user: 1
+  done_topic: 1
+  done: 1

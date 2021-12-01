@@ -1,0 +1,26 @@
+<head>
+    <link rel="stylesheet" href="../app/assets/stylesheets/users.scss">
+    <title>新規登録</title>
+</head>
+<div class="main">
+    
+    <div class="Form">
+        <h1>新規登録</h1>
+        <%= form_tag("/users/create") do %>
+            <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+            <section>
+                <p>名前</p>
+                <input name="name" class="usersForm">
+                <p>メールアドレス</p>
+                <input name="email" class="usersForm">
+                <p>パスワード</p>
+                <input name="password" type="password" class="usersForm">
+            </section>
+                <input type="submit" value="新規登録" class="btn">
+        <% end %>
+         <%= link_to("ログイン画面へ","/login", class: "loginForm")%>
+         <button><%= link_to "Topへ戻る" , root_path, class: "Btn" %></button>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<h1>検索結果</h1>
+     <ul>
+        <% @posts.each do |topic| %>
+        <li class="topic"><%= link_to topic.title, topic_path(topic),class: "topicLink" %></li>
+        <% end %>
+    </ul>

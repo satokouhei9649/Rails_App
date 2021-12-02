@@ -15,6 +15,8 @@ class TopicsController < ApplicationController
     end
     # 検索機能
     def search 
+          @posts = Topic.search(params[:keyword])
+          @keyword = params[:keyword]
     end
         
     # 投稿詳細

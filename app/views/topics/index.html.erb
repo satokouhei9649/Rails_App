@@ -18,9 +18,9 @@
             </ul>
         </div>
     </section>
-    
+    <h1>記事を検索する</h1>
         <div class="searchNav">
-           <%= form_with url: topics_search_path, method: :get,class: "search", local: true do |f| %>
+           <%= form_with url: topics_search_path, method: :get, class: "search", local: true do |f| %>
               <%= f.text_field :keyword, value: @keyword,class: "searchForm"%>
               <%= f.submit "検索", class: "searchBtn" %>
             <% end %>

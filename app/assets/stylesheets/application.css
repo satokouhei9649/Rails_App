@@ -128,11 +128,14 @@ padding: 20px;
 }
 footer {
      background-color: orange;
+     margin-top: 100px;
+     
 }
 
 .contactForm {
     color: white;
-    
+    margin: 0;
+    padding: 48px 64px;
 }
 /*投稿画面*/
 /*input[type= "text"],textarea {*/
@@ -147,6 +150,14 @@ footer {
 /*    display: block;*/
 /*    margin: 20px auto;*/
 /*}*/
+.Text {
+    line-height: 18px;
+    width: 30%;
+    border-radius: 10px;
+}
+textarea {
+    height: 180px;
+}
 .error {
     font-size:14px;
     font-weight: bold;
@@ -156,8 +167,10 @@ footer {
     background-color: rgba(255, 123, 0, 0.911);
     border: 1px solid rgba(255, 123, 0, 0.911);
     color: white;
-    width: 20%;
+    border-radius: 5px;
+    width: 15%;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .createTopic {
      width:50%;
@@ -268,22 +281,22 @@ footer {
 /*投票機能*/
 .votesFunction {
     display: flex;
-    justify-content: center;
-    margin-bottom: 60px;
-    margin-top: 20px;
-    
+    justify-content: centers;
+}
+.Btn {
+    display: block;
+    color: white;
+   
 }
 .votesBtn {
     background-color: blue;
     color: white;
     padding: 12px 24px;
     border-radius: 30px;
-    margin-right: 50px;
 }
 .cancelBtn {
     background-color: tomato;
     color: white;
     padding: 12px 24px;
     border-radius: 30px;
-    margin-left: 50px;
 }

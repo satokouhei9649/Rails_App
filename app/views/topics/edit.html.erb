@@ -4,17 +4,17 @@
  <h2>タイトルの変更</h2>
     <p>
         <!--タイトル入力-->
-        <%= f.text_field :title, placeholder: @topic.title %>
+        <%= f.text_field :title,class: "Text" ,placeholder: @topic.title %>
         
         <!--エラー表示-->
         <% if @topic.errors.messages[:title].any? %>
          <span class="error"><%= @topic.errors.messages[:title][0] %></span>
         <% end %>
     </p>
-    <h2>選択肢の変更</h2>
+    <h2>記事の中身の変更</h2>
     <p>
         <!--本文入力-->
-        <%= f.text_area :body, placeholder: @topic.body %>
+        <%= f.text_area :body,class: "Text", placeholder: @topic.body %>
         
         <% if @topic.errors.messages[:body].any? %>
          <span class="error"><%= @topic.errors.messages[:body][0] %></span>

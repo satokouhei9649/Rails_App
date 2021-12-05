@@ -4,7 +4,7 @@
    <h2>題名</h2>
      <p>
          <!--タイトル入力-->
-         <%= f.text_field :title, class: "createTopic" %>
+         <%= f.text_field :title, class: "Text" %>
          
          <!--エラー表示-->
          <% if @topic.errors.messages[:title].any? %>
@@ -14,7 +14,7 @@
      <h3>本文内容</h3>
      <p>
          <!--本文入力-->
-         <%= f.text_area :body, class: "createTopic"%>
+         <%= f.text_area :body,class: "Text"%>
          
          <% if @topic.errors.messages[:body].any? %>
           <span class="error"><%= @topic.errors.messages[:body][0] %></span>

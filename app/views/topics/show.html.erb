@@ -24,8 +24,8 @@
               <!--選択肢削除機能-->
                <% if session[:user_id] == @topic.user_id %> 
                     <!--<div class="deleteBtn">-->
-                        <%= form_with model: @choice,  url: {controller: "choices", action: "destroy"} do |delete| %>
-                              <%= delete.submit "[X]" ,data: { confirm: '削除しますか？' }, class: "delete_btn" %>
+                        <%= form_with model: @choice, class: "delete_Btn", url: {controller: "choices", action: "destroy"} do |delete| %>
+                              <%= delete.submit "X" ,data: { confirm: '削除しますか？' }, class: "delete_btn" %>
                               <%= hidden_field_tag :choice_id, choices.id %>
                         <% end %>
                     <!--</div>-->

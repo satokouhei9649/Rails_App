@@ -227,29 +227,22 @@ textarea {
 .total {
     font-size: 36px;
 }
-.choice_div > input[type="submit"] {
-    display: inline-block;
-    width: 15%;
-    height: 30px;
-    margin-left: 330px;
-}
+
 /*選択肢表示*/
 .choice_div {
     display: flex;
     justify-content: center;
+    
 }
 .choice_content {
     display: block;
     list-style: none;
     height: 40px;
-    width: 40%;
+    width: 45%;
     border-radius: 5px;
     border: 1px solid black;
     padding: 4px 12px;
     box-sizing: border-box;
-    margin-top: 17px;
-    margin-bottom: 10px;
-    margin-right: 30px;
     background-color: white;
 }
 
@@ -259,7 +252,10 @@ textarea {
     color: white;
     background-color: orange;
     border-color: orange;
-    margin: 10px auto;
+}
+.delete_Btn {
+    display: block;
+    width: 4%;
 }
 
 /*選択肢作製*/
@@ -281,21 +277,23 @@ textarea {
 /*投票機能*/
 .votesFunction {
     display: flex;
-    justify-content: centers;
+    justify-content: center;
 }
 .Btn {
     display: block;
     color: white;
-   
+    margin: 30px 80px;
 }
 .votesBtn {
     background-color: blue;
+    border-color: blue;
     color: white;
     padding: 12px 24px;
     border-radius: 30px;
 }
 .cancelBtn {
     background-color: tomato;
+    border-color: tomato;
     color: white;
     padding: 12px 24px;
     border-radius: 30px;

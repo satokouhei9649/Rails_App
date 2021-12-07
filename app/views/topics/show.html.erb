@@ -64,7 +64,7 @@
               <!--選択肢の作成-->
          <%= form_with model: @choice,  class: "choice_form",url: {controller: "choices", action: "create"} do |choice| %>
              <!--送信ボタン-->
-             <%= choice.submit "+" %>
+             <%= choice.submit "+",class: "submit" %>
              <!--選択肢の文章-->
              <%= choice.text_field :content %>
              

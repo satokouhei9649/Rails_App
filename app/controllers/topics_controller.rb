@@ -17,6 +17,9 @@ class TopicsController < ApplicationController
     def search 
           @posts = Topic.search(params[:keyword])
           @keyword = params[:keyword]
+        if session[:user_id]
+            @user = User.find(session[:user_id])
+        end
     end
         
     # 投稿詳細

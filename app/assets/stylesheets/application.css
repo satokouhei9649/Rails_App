@@ -95,8 +95,8 @@ padding: 20px;
 }
 
 .topics {
-    margin: 0 auto;
-    margin-left: 240px;
+    margin: 0;
+    margin-left: 270px;
     width: 60%;
 }
 .topicLink {
@@ -115,7 +115,7 @@ padding: 20px;
     display: flex;
 }
 .lists {
-    margin: 0 auto;
+    margin: 0 ;
 }
 
 .list {
@@ -138,18 +138,7 @@ footer {
     padding: 48px 64px;
 }
 /*投稿画面*/
-/*input[type= "text"],textarea {*/
-/*    margin-bottom: 20px;*/
-/*    height: 30px;*/
-/*}*/
-/*textarea {*/
-/*    height: 200px;*/
-/*}*/
-/*input[type="submit"] {*/
-/*    text-align: center;*/
-/*    display: block;*/
-/*    margin: 20px auto;*/
-/*}*/
+
 .Text {
     line-height: 18px;
     width: 30%;
@@ -164,13 +153,14 @@ textarea {
     color: tomato;
 }
 .submit {
+    display: block;
     background-color: rgba(255, 123, 0, 0.911);
     border: 1px solid rgba(255, 123, 0, 0.911);
     color: white;
     border-radius: 5px;
     width: 15%;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 .createTopic {
      width:50%;
@@ -207,20 +197,24 @@ textarea {
 }
 .edit {
    background-color:rgb(2, 214, 48);
-   color: white;
    border-color: rgb(2, 214, 48);
+   box-shadow:1px 1px rgb(2, 214, 48);
+   color: white;
    border-radius: 5px;
    list-style: none;
    width: 15%;
 }
 .delete {
     background-color: red;
+    border-color: red;
+    box-shadow: 1px 1px red;
 }
 .backlink{
     display:inline-block;
     border-radius: 5px;
     width: 15%;
     background-color: orange;
+    box-shadow: 1px 1px orange;
     color: white;
 }
 
@@ -265,14 +259,14 @@ textarea {
 }
 
 /*追加ボタン*/
-.choice_form > input[type= "submit"] {
-    margin: 30px auto;
-    width: 10%;
-    color:white;
-    background-color: orange;
-    border-radius: 5px;
-    border-color: orange;
-}
+/*.choice_form > input[type= "submit"] {*/
+/*    margin: 30px auto;*/
+/*    width: 10%;*/
+/*    color:white;*/
+/*    background-color: orange;*/
+/*    border-radius: 5px;*/
+/*    border-color: orange;*/
+/*}*/
 
 /*投票機能*/
 .votesFunction {

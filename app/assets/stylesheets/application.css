@@ -14,6 +14,12 @@
      text-decoration: none;
      color:black;
  }
+ input[type="submit"] {
+    color: white;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+ }
 /*Top画面*/
 /*ヘッダー*/
 header {
@@ -47,6 +53,11 @@ header> ul > li {
     margin-right: 20px;
     width: 30%;
     border-radius: 10px;
+}
+.search > input[type="submit"] {
+    margin: 0;
+    background-color: black;
+    border: 1px solid black;
 }
 /*topページ*/
 
@@ -103,11 +114,8 @@ textarea {
     color: tomato;
 }
 .submit {
-    display: block;
     background-color: rgba(255, 123, 0, 0.911);
     border: 1px solid rgba(255, 123, 0, 0.911);
-    color: white;
-    border-radius: 5px;
     width: 15%;
     cursor: pointer;
     margin: 20px auto;
@@ -208,9 +216,7 @@ textarea {
 .votesBtn, .cancelBtn {
     background-color: blue;
     border-color: blue;
-    color: white;
     padding: 8px 24px;
-    border-radius: 5px;
     margin: 10px 80px;
 }
 .cancelBtn {

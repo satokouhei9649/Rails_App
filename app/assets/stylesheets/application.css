@@ -1,46 +1,35 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
  body {
     margin: 0 auto;
     text-align: center;
     background-color:rgba(255, 191, 123, 0.753);
     }
- a:link {
+    ul {
+        padding:0;
+        list-style: none;
+    }
+ a:link, a:visited{
+     display: block;
+     margin: 0 auto;
      text-decoration: none;
- }
- a:visited {
-     text-decoration: none;
+     color:black;
  }
 /*Top画面*/
 /*ヘッダー*/
-nav {
+header {
     display: flex;
-    justify-content: space-between;
-    height: 80px;
-    margin:0 auto;
+    justify-content: right;
+    height: 100px;
     background-color: orange;
-    padding: 15px;
 }
-
-.menu > ul {
-    display: flex;
-    float:right;
-    list-style: none;
+header > ul {
+    display: flex; 
+    justify-content: right;
+    align-items: center;
+    min-width: 80%;
 }
-.menu > ul > li {
+header> ul > li {
+   min-width: 10%;
    margin:0;
    margin-right: 30px;
    padding: 5px 10px;
@@ -49,92 +38,54 @@ nav {
 .link:visited {
    color: white;
 }
-.alist:visited {
-    color: black;
-}
-.alist:link{
-    color: black;
-}
 /*検索機能*/
-.searchNav {
-    margin: 0 auto;
-    width: 50%;
-}
 .search {
     display: flex;
-    align-items: center;
-    ;
+    justify-content: center; 
 }
 .searchForm {
-    display: block;
-    margin: 0 auto;
-    height: 20px;
-    width: 60%;
+    margin-right: 20px;
+    width: 30%;
     border-radius: 10px;
 }
-.searchBtn {
-}
-
 /*topページ*/
-main {
-margin: 0 auto;
-padding: 20px;
 
-}
 .main {
     width: 100%;
     padding: 60px 0;
-}
-.main > h1 {
-    font-size: 60px;
     margin:0;
-   
-}
-.main_title {
-    font-size: 48px;
+    font-size: 30px;
 }
 
 .topics {
-    margin: 0;
-    margin-left: 270px;
-    width: 60%;
+    margin: 0 auto;
+    width: 50%;
 }
-.topicLink {
-    color: black;
-}
-.topic {
-    color: black;
+.topic, .list {
     border: 1px solid black;
     padding: 40px ;
     margin-bottom: 24px;
-    border-radius: 15px;
-    box-shadow: 1px 1px ;
+    border-radius: 10px;
     background-color :white;
+}
+.list {
+    display: flex;
+    padding: 12px 32px;
+    margin: 10px 0;
 }
 .top {
     display: flex;
 }
 .lists {
-    margin: 0 ;
+    position: absolute;
+    right:0;
 }
 
-.list {
-    border: 1px solid black;
-    list-style: none;
-    padding: 12px 32px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 10px 0;
-}
 footer {
      background-color: orange;
      margin-top: 100px;
-     
 }
-
 .contactForm {
-    color: white;
-    margin: 0;
     padding: 48px 64px;
 }
 /*投稿画面*/
@@ -162,16 +113,7 @@ textarea {
     cursor: pointer;
     margin: 20px auto;
 }
-.createTopic {
-     width:50%;
-}
-
-
 /*show.html.erb*/
-.topicContainer {
-    padding:50px;
-    background-color:rgba(255, 191, 123, 0.753);
-}
 /*タイトル*/
 .topicTitle {
     margin: 25px auto;
@@ -188,34 +130,39 @@ textarea {
     margin: 20px 0;
 }
 /*編集機能*/
-.editFunction {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    height: 20px;
-    margin: 0 auto;
-}
 .edit {
+   display: block;
    background-color:rgb(2, 214, 48);
    border-color: rgb(2, 214, 48);
    box-shadow:1px 1px rgb(2, 214, 48);
    color: white;
    border-radius: 5px;
-   list-style: none;
+   margin: 10px auto;
    width: 15%;
 }
-.delete {
+.editFunction {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+.editFunction > a,.backlink{
+   background-color:rgb(2, 214, 48);
+   border-color: rgb(2, 214, 48);
+   box-shadow:1px 1px rgb(2, 214, 48);
+   color: white;
+   border-radius: 5px;
+   width: 15%;
+}
+.editFunction >.delete {
     background-color: red;
     border-color: red;
     box-shadow: 1px 1px red;
 }
-.backlink{
-    display:inline-block;
-    border-radius: 5px;
-    width: 15%;
+.editFunction >.backlink,.backlink{
     background-color: orange;
     box-shadow: 1px 1px orange;
-    color: white;
+    border-color: orange
 }
 
 .total {
@@ -226,11 +173,10 @@ textarea {
 .choice_div {
     display: flex;
     justify-content: center;
+    align-items: center;
     
 }
 .choice_content {
-    display: block;
-    list-style: none;
     height: 40px;
     width: 45%;
     border-radius: 5px;
@@ -238,6 +184,7 @@ textarea {
     padding: 4px 12px;
     box-sizing: border-box;
     background-color: white;
+    margin-right: 20px;
 }
 
 .delete_btn {
@@ -247,48 +194,30 @@ textarea {
     background-color: orange;
     border-color: orange;
 }
-.delete_Btn {
-    display: block;
-    width: 4%;
-}
 
 /*選択肢作製*/
+.choice_form{
+    margin-bottom: 80px;
+}
 .choice_form > input[type= "text"] {
   width: 40%;
   height: 40px;
 }
-
-/*追加ボタン*/
-/*.choice_form > input[type= "submit"] {*/
-/*    margin: 30px auto;*/
-/*    width: 10%;*/
-/*    color:white;*/
-/*    background-color: orange;*/
-/*    border-radius: 5px;*/
-/*    border-color: orange;*/
-/*}*/
 
 /*投票機能*/
 .votesFunction {
     display: flex;
     justify-content: center;
 }
-.Btn {
-    display: block;
-    color: white;
-    margin: 30px 80px;
-}
-.votesBtn {
+.votesBtn, .cancelBtn {
     background-color: blue;
     border-color: blue;
     color: white;
-    padding: 12px 24px;
-    border-radius: 30px;
+    padding: 8px 24px;
+    border-radius: 5px;
+    margin: 10px 80px;
 }
 .cancelBtn {
     background-color: tomato;
     border-color: tomato;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 30px;
 }

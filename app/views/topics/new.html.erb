@@ -1,11 +1,10 @@
- <main>
+
   <h1>新規投稿作成</h1>
   <%= form_for :topic, url:topics_path do |f|%>
    <h2>題名</h2>
      <p>
          <!--タイトル入力-->
          <%= f.text_field :title, class: "Text" %>
-         
          <!--エラー表示-->
          <% if @topic.errors.messages[:title].any? %>
           <span class="error"><%= @topic.errors.messages[:title][0] %></span>
@@ -15,17 +14,16 @@
      <p>
          <!--本文入力-->
          <%= f.text_area :body,class: "Text"%>
-         
          <% if @topic.errors.messages[:body].any? %>
           <span class="error"><%= @topic.errors.messages[:body][0] %></span>
          <% end %>
      </p>
          <!--投稿ボタン-->
-         <%= f.submit  value="投稿" , class: "submit"%>
+         <%= f.submit  value="投稿", class: "submit"%>
     
   <% end %>
   
    <!--topページへ-->
   <%= link_to "Topへ" , root_path, class: "backlink" %>
-</main>
+
  

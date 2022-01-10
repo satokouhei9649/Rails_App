@@ -5,17 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "users", :media => "all" %>
   </head>
   <body>
     <header>
-       <nav>
-         <div>
-           
-         </div>
-          <div class="menu">
            <ul>
             <li>このサイトについて</li>
             <% if session[:user_id] %>
@@ -23,11 +18,10 @@
               <li><%= link_to "ログアウト", logout_path, {method: "post",class: "link"} %></li>
               <li><%= @user.name %></li>
             <% else %>
-              <li><%= link_to '新規登録', "/signup" ,{class: "link"} %> / <%= link_to 'ログイン', "/login" ,{class: "link"} %></li>
+              <li><%= link_to '新規登録', "/signup" ,{class: "link"} %></li>
+              <li><%= link_to 'ログイン', "/login" ,{class: "link"} %></li>
             <% end %>
             </ul>
-          </div>
-      </nav>
     </header>
     <%= yield %>
   </body>

@@ -40,6 +40,9 @@ class TopicsController < ApplicationController
        
     end
     def create
+         if session[:user_id]
+            @user = User.find(session[:user_id])
+        end
         # 投稿
         @topic = Topic.new(topic_params)
         # user_idにログインしている人のid

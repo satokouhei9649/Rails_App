@@ -18,7 +18,7 @@
     color: white;
     border-radius: 5px;
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
  }
 /*Top画面*/
 /*ヘッダー*/
@@ -210,10 +210,12 @@ textarea {
 
 /*投票機能*/
 .votesFunction {
+    margin: 0 auto;
+    width: 20%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
-.votesBtn, .cancelBtn {
+.votesBtn,.cancelBtn {
     background-color: blue;
     border-color: blue;
     padding: 8px 24px;

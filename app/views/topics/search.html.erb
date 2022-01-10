@@ -1,8 +1,7 @@
 <h1>検索結果</h1>
-<div class="topics">
-     <ul>
+     <ul class="topics">
         <% @posts.each do |topic| %>
         <li class="topic"><%= link_to topic.title, topic_path(topic),class: "topicLink" %></li>
         <% end %>
+        <%= link_to 'Topへ', root_path, class: "link backlink" %>
     </ul>
-</div>

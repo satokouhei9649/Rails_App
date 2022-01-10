@@ -89,7 +89,6 @@ footer {
     padding: 48px 64px;
 }
 /*投稿画面*/
-
 .Text {
     line-height: 18px;
     width: 30%;
@@ -160,6 +159,7 @@ textarea {
     box-shadow: 1px 1px red;
 }
 .editFunction >.backlink,.backlink{
+    display: block;
     background-color: orange;
     box-shadow: 1px 1px orange;
     border-color: orange
@@ -198,10 +198,6 @@ textarea {
 /*選択肢作製*/
 .choice_form{
     margin-bottom: 80px;
-}
-.choice_form > input[type= "text"] {
-  width: 40%;
-  height: 40px;
 }
 
 /*投票機能*/

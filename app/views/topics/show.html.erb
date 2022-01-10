@@ -52,7 +52,7 @@
              <!--送信ボタン-->
              <%= choice.submit "+",class: "submit" %>
              <!--選択肢の文章-->
-             <%= choice.text_field :content %>
+             <%= choice.text_field :content, class: "Text" %>
              <%= hidden_field_tag :topic_id, @topic.id %>
          <% end %>
     <% end %>

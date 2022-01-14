@@ -33,14 +33,14 @@ class TopicsController < ApplicationController
     end
     # 新規投稿作成
     def new
-        @topic = Topic.new()
+        @topic = Topic.new
         if session[:user_id]
             @user = User.find(session[:user_id])
         end
        
     end
     def create
-         if session[:user_id]
+        if session[:user_id]
             @user = User.find(session[:user_id])
         end
         # 投稿
@@ -50,8 +50,6 @@ class TopicsController < ApplicationController
         # 保存
         if @topic.save
             redirect_to root_path
-        else
-            render 'new'
         end
     end
     # 編集画面
@@ -63,11 +61,14 @@ class TopicsController < ApplicationController
     end
     # 更新機能
     def update
+        if session[:user_id]
+            @user = User.find(session[:user_id])
+        end
         @topic = Topic.find(params[:id])
          if @topic.update(topic_params)
             redirect_to topic_path(@topic)
          else
-            render 'new'
+            render 'edit'
          end
     end
     

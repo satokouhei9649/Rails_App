@@ -8,9 +8,12 @@
                     <% end %>
                 </ul>
                 <ul class="lists">
+                <% if session[:user_id] %>
                     <li class="list"><%= link_to '新規投稿作成', new_topic_path%></li>
+                    <li class="list"><%= link_to '自分が投稿した記事を確認する', "/mytopics"%></li>
+                <% else %>
                     <li class="list"><%= link_to '新規登録', "/signup" ,class: "alist"%> / <%= link_to 'ログイン', "/login"%></li>
-                    <li class="list"><%= link_to '自分が投稿した記事を確認する', "/mytopics"%> </li>
+                <% end %>
                 </ul>
         </section>
         <h1>記事を検索する</h1>

@@ -14,14 +14,14 @@
     </div>
            <p class="total">総投票数　<%= @total %></p>
           <!--選択肢を表示-->
-    <% @choices.each do | choices | %>
+    <% @choices.each do | choice | %>
         <div class="choice_div">
-            <p class="choice_content"><%= choices.content %></p>
+            <p class="choice_content"><%= choice.content %><span><%= choice.votes %></span></p>
               <!--選択肢削除機能-->
                <% if session[:user_id] == @topic.user_id %> 
                         <%= form_with model: @choice, url: {controller: "choices", action: "destroy"} do |delete| %>
                               <%= delete.submit "X" ,data: { confirm: '削除しますか？' }, class: "delete_btn" %>
-                              <%= hidden_field_tag :choice_id, choices.id %>
+                              <%= hidden_field_tag :choice_id, choice.id %>
                         <% end %>
                 <% end %>
             </div>
@@ -31,14 +31,14 @@
                 <% if @user.id == session[:user_id]  %>
                   <%= form_with model: @choice,  url: {controller: "choices", action: "votes"} do |votes| %>
                       <%= votes.submit "投票", class: "votesBtn" %>
-                      <%= hidden_field_tag :choice_id, choices.id %>
+                      <%= hidden_field_tag :choice_id, choice.id %>
                   <% end %>
                 <% end %> 
                             <!--取り消し機能-->
                 <% if @user.id == session[:user_id]%>
                   <%= form_with model: @choice,  url: {controller: "choices", action: "votes_cancel"} do |votes| %>
                           <%= votes.submit "取り消し", class: "cancelBtn" %>
-                          <%= hidden_field_tag :choice_id, choices.id %>
+                          <%= hidden_field_tag :choice_id, choice.id %>
                   <% end %>
                 <% end %>
             </div>

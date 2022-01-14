@@ -9,7 +9,6 @@ class UsersController < ApplicationController
             password: params[:password])
         if @user.save
             session[:user_id] = @user.id
-            flash[:notice] = "登録が完了しました"
             redirect_to root_path
         else
             render("users/new")
@@ -26,7 +25,6 @@ class UsersController < ApplicationController
         @user = User.find_by(email: params[:email],password: params[:password])
         if @user
             session[:user_id] = @user.id
-            flash[:notice] = "ログインに成功しました！！！！！！"
             redirect_to topics_path
         else
             @error_message = "メールアドレスまたはパスワードが間違っています"

@@ -1,24 +1,39 @@
-# README
+# アプリケーション名
+Resarch.com
+# アプリケーション概要
+気になったこと、色々な意見、考え方をTopicにして選択肢を作成して投票する　アプリです  
+例）タイムマシンがあるなら過去or未来に行く？、お菓子のタケノコ派、キノコ派、PCのOSは何を使っているの?  
+＜作ろうと思ったキッカケ＞  
+最初は　コロナウイルスワクチン摂取でした　自分はワクチンは可能なら摂取した方がいいんじゃないかと思っていました  
+しかし、テレビやネットを見てみると副作用があるから、打たない人もいることを知り　自分の周りには否定する人はいなかったので  
+世間ではどのような考え方を持ち、どのくらいの人がその考え方をしているのかのか気になり　このアプリを制作しました  
+  
+URL ただいまデプロイ中(AWSにてデプロイ予定です）  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 使用技術  
+  Ruby 2.6  
+  Ruby on Rails 6.1.4  
+  SQLite 3.35.0
+  Amazon　Linux
+# 機能一覧  
+・新規登録機能  
+・ログイン機能  
+・Topic検索機能  
+・Topic投稿機能  
+・Topic編集機能  
+・Topic削除機能  
+・選択肢作成機能  
+・投票機能  
+・投票取り消し機能  
+・選択肢削除機能  
+# 頑張ったこと、工夫した所、苦労した所  
+・選択肢の表示 (hiiden_filed_tag)を見つけるまでとても苦労した 
+・sessionで機能制限  
+・ SQLiteのversionのupdata
+# 課題、やりたいこと
+・デプロイ(HTTPS化、AWSのサービスを活用したい)  
+・フロントエンドをVue.js、React,等で実装する  
+・画像投稿機能の追加  
+・一つのTopicに一人一票しかできないようにする  
+・レイアウトをも少し考える  
+・性別、年齢、職業等　データベースで扱える項目を増やす  
